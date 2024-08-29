@@ -2184,8 +2184,8 @@ cs:
       not_approved: "Váš účet zatím nebyl schválen. Až se tak stane, obdržíte oznámení emailem a budete se moci přihlásit."
       google_oauth2:
         name: "Google"
-        title: "Přihlásit se pomocí Google"
-        sr_title: "Přihlásit se pomocí Google"
+        title: "Přihlásit se přes Google"
+        sr_title: "Přihlásit se přes Google"
       twitter:
         name: "Twitter"
         title: "Přihlásit se přes Twitter"
@@ -2211,7 +2211,7 @@ cs:
         title: "Přihlásit se přes LinkedIn"
         sr_title: "Přihlásit se přes LinkedIn"
       passkey:
-        name: "Přihlásit pomocí přístupového klíče Passkey"
+        name: "Přihlásit se přes Passkey"
       second_factor_toggle:
         totp: "Místo toho použít autentizační aplikaci"
         backup_code: "Místo toho použít záložní kód"
