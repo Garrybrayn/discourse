@@ -1597,10 +1597,38 @@ RSpec.describe Search do
     let!(:post_2) { Fabricate(:post, topic: topic_2) }
 
     describe ".prepare_data" do
-      it "removes punctuations" do
-        SiteSetting.search_tokenize_japanese = true
+      subject(:prepared_data) { Search.prepare_data(data) }
 
-        expect(Search.prepare_data(post.raw)).to eq("This is some japanese text 日本 が 大好き です")
+      let(:data) { post.raw }
+
+      before { SiteSetting.search_tokenize_japanese = true }
+
+      it "removes punctuations" do
+        expect(prepared_data).to eq("This is some japanese text 日本 が 大好き です")
+      end
+
+      context "when providing only an URL" do
+        let(:data) { "http://localhost/t/-/51" }
+
+        it "does not change it" do
+          expect(prepared_data).to eq(data)
+        end
+      end
+
+      context "when providing only a path" do
+        let(:data) { "/t/-/51" }
+
+        it "does not change it" do
+          expect(prepared_data).to eq(data)
+        end
+      end
+
+      context "when providing only an ID" do
+        let(:data) { "51" }
+
+        it "does not change it" do
+          expect(prepared_data).to eq(data)
+        end
       end
     end
 
@@ -1616,31 +1644,68 @@ RSpec.describe Search do
         SiteSetting.refresh!
       end
 
-      it "finds posts containing Japanese text if tokenization is forced" do
-        SiteSetting.search_tokenize_japanese = true
+      context "when tokenization is forced" do
+        before { SiteSetting.search_tokenize_japanese = true }
 
-        expect(Search.execute("日本").posts.map(&:id)).to eq([post_2.id, post.id])
-        expect(Search.execute("日").posts.map(&:id)).to eq([post_2.id, post.id])
+        it "finds posts containing Japanese text" do
+          expect(Search.execute("日本").posts.map(&:id)).to eq([post_2.id, post.id])
+          expect(Search.execute("日").posts.map(&:id)).to eq([post_2.id, post.id])
+        end
       end
 
-      it "find posts containing search term when site's locale is set to Japanese" do
-        SiteSetting.default_locale = "ja"
+      context "when default locale is set to Japanese" do
+        before { SiteSetting.default_locale = "ja" }
 
-        expect(Search.execute("日本").posts.map(&:id)).to eq([post_2.id, post.id])
-        expect(Search.execute("日").posts.map(&:id)).to eq([post_2.id, post.id])
-      end
+        it "find posts containing search term" do
+          expect(Search.execute("日本").posts.map(&:id)).to eq([post_2.id, post.id])
+          expect(Search.execute("日").posts.map(&:id)).to eq([post_2.id, post.id])
+        end
 
-      it "does not include superfluous spaces in blurbs" do
-        SiteSetting.default_locale = "ja"
+        it "does not include superfluous spaces in blurbs" do
+          post.update!(
+            raw: "場サアマネ織企ういかせ竹域ヱイマ穂基ホ神3予読ずねいぱ松査ス禁多サウ提懸イふ引小43改こょドめ。深とつぐ主思料農ぞかル者杯検める活分えほづぼ白犠",
+          )
 
-        post.update!(
-          raw: "場サアマネ織企ういかせ竹域ヱイマ穂基ホ神3予読ずねいぱ松査ス禁多サウ提懸イふ引小43改こょドめ。深とつぐ主思料農ぞかル者杯検める活分えほづぼ白犠",
-        )
+          results = Search.execute("ういかせ竹域", type_filter: "topic")
 
-        results = Search.execute("ういかせ竹域", type_filter: "topic")
+          expect(results.posts.length).to eq(1)
+          expect(results.blurb(results.posts.first)).to include("ういかせ竹域")
+        end
 
-        expect(results.posts.length).to eq(1)
-        expect(results.blurb(results.posts.first)).to include("ういかせ竹域")
+        context "when searching for a topic in particular" do
+          subject(:results) do
+            described_class.execute(
+              term,
+              guardian: Discourse.system_user.guardian,
+              type_filter: "topic",
+              search_for_id: true,
+            )
+          end
+
+          context "when searching by topic ID" do
+            let(:term) { topic.id }
+
+            it "finds the proper post" do
+              expect(results.posts.first).to have_attributes(topic: topic, post_number: 1)
+            end
+          end
+
+          context "when searching by topic URL" do
+            let(:term) { "http://#{Discourse.current_hostname}/t/-/#{topic.id}" }
+
+            it "finds the proper post" do
+              expect(results.posts.first).to have_attributes(topic: topic, post_number: 1)
+            end
+          end
+
+          context "when searching by topic path" do
+            let(:term) { "/t/-/#{topic.id}" }
+
+            it "finds the proper post" do
+              expect(results.posts.first).to have_attributes(topic: topic, post_number: 1)
+            end
+          end
+        end
       end
     end
   end

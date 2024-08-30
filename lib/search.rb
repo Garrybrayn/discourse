@@ -116,8 +116,13 @@ class Search
     data = search_data.dup
     data.force_encoding("UTF-8")
     data = clean_term(data)
+    uri =
+      begin
+        URI.parse(data)
+      rescue URI::InvalidURIError
+      end
 
-    if purpose != :topic
+    if purpose != :topic && !uri
       if segment_chinese?
         require "cppjieba_rb" unless defined?(CppjiebaRb)
 
