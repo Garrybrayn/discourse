@@ -962,6 +962,7 @@ registerWidgetShim(
       @copyLink={{@data.copyLink}}
       @editPost={{@data.editPost}}
       @replyToPost={{@data.replyToPost}}
+      @share={{@data.share}}
       @toggleLike={{@data.toggleLike}}
     />`
 );
