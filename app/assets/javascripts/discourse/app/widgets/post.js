@@ -537,6 +537,7 @@ createWidget("post-contents", {
         model: this.findAncestorModel(),
         transformedPost: attrs,
         ...extraState,
+        copyLink: () => this.sendWidgetAction("copyLink"),
         editPost: () => this.sendWidgetAction("editPost"), // this action comes from the post stream
         replyToPost: () => this.sendWidgetAction("replyToPost"), // this action comes from the post stream
         toggleLike: () => this.sendWidgetAction("toggleLike"),

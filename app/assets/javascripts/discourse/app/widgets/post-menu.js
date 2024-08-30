@@ -959,6 +959,7 @@ registerWidgetShim(
     <Post::Menu
       @model={{@data.model}}
       @transformedPost={{@data.transformedPost}}
+      @copyLink={{@data.copyLink}}
       @editPost={{@data.editPost}}
       @replyToPost={{@data.replyToPost}}
       @toggleLike={{@data.toggleLike}}
