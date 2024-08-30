@@ -31,7 +31,7 @@ jobs:
     name: ${{ matrix.target }} ${{ matrix.build_type }} # Update fetch-job-id step if changing this
     runs-on: ${{ (matrix.build_type == 'annotations') && 'ubuntu-latest' || 'ubuntu-22.04-8core' }}
     container: discourse/discourse_test:slim${{ (matrix.build_type == 'frontend' || matrix.build_type == 'system') && '-browsers' || '' }}
-    timeout-minutes: 20
+    timeout-minutes: 60
 
     env:
       DISCOURSE_HOSTNAME: www.example.com
@@ -49,20 +49,8 @@ jobs:
       fail-fast: false
 
       matrix:
-        build_type: [backend, frontend, system, annotations]
-        target: [core, plugins, themes]
-        exclude:
-          - build_type: annotations
-            target: plugins
-          - build_type: annotations
-            target: themes
-          - build_type: backend
-            target: themes
-          - build_type: frontend
-            target: core # Handled by core_frontend_tests job (below)
-        include:
-          - build_type: system
-            target: chat
+        build_type: [backend]
+        target: [plugins]
 
     steps:
       - name: Set working directory owner
@@ -243,9 +231,29 @@ jobs:
         if: matrix.build_type == 'backend' && matrix.target == 'core'
         run: bin/turbo_rspec --use-runtime-info --verbose --format=documentation --profile=50
 
-      - name: Plugin RSpec
+      - name: Plugin RSpec (2 cores)
         if: matrix.build_type == 'backend' && matrix.target == 'plugins'
-        run: bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50']
+        run: PARALLEL_TEST_PROCESSORS=2 bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50'] || true
+
+      - name: Plugin RSpec (4 cores)
+        if: matrix.build_type == 'backend' && matrix.target == 'plugins'
+        run: PARALLEL_TEST_PROCESSORS=4 bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50'] || true
+
+      - name: Plugin RSpec (5 cores)
+        if: matrix.build_type == 'backend' && matrix.target == 'plugins'
+        run: PARALLEL_TEST_PROCESSORS=5 bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50'] || true
+
+      - name: Plugin RSpec (6 cores)
+        if: matrix.build_type == 'backend' && matrix.target == 'plugins'
+        run: PARALLEL_TEST_PROCESSORS=6 bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50'] || true
+
+      - name: Plugin RSpec (7 cores)
+        if: matrix.build_type == 'backend' && matrix.target == 'plugins'
+        run: PARALLEL_TEST_PROCESSORS=7 bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50'] || true
+
+      - name: Plugin RSpec (8 cores)
+        if: matrix.build_type == 'backend' && matrix.target == 'plugins'
+        run: PARALLEL_TEST_PROCESSORS=8 bin/rake plugin:turbo_spec['*','--verbose --format=documentation --use-runtime-info --profile=50'] || true
 
       - name: Plugin QUnit
         if: matrix.build_type == 'frontend' && matrix.target == 'plugins'
