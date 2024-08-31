@@ -20,8 +20,12 @@
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",
     "discourse-common": "1.0.0",
+    "discourse-i18n": "1.0.0",
     "ember-auto-import": "^2.7.4",
-    "markdown-it": "^14.0.0"
+    "markdown-it": "^14.0.0",
+    "pretty-text": "1.0.0",
+    "truth-helpers": "1.0.0",
+    "xss": "*"
   },
   "peerDependencies": {
     "discourse-i18n": "1.0.0",

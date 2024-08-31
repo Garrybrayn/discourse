@@ -12,8 +12,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember serve",
-    "test": "ember test",
-    "postinstall": "../run-patch-package"
+    "test": "ember test"
   },
   "dependencies": {
     "@discourse/ember-instantsearch": "^1.1.2",
@@ -29,6 +28,7 @@
     "discourse-widget-hbs": "1.0.0",
     "ember-route-template": "^1.0.3",
     "ember-source": "~5.5.0",
+    "ember-tracked-storage-polyfill": "^1.0.0",
     "handlebars": "^4.7.8",
     "highlight.js": "^11.10.0",
     "immer": "^10.1.1",
@@ -48,6 +48,7 @@
     "@ember/render-modifiers": "^2.1.0",
     "@ember/string": "^4.0.0",
     "@ember/test-helpers": "^4.0.2",
+    "@ember/test-waiters": "^3.1.0",
     "@embroider/compat": "^3.6.0",
     "@embroider/core": "^3.4.14",
     "@embroider/macros": "^1.13.1",
