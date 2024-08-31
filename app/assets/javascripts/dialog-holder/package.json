@@ -13,7 +13,7 @@
     "ember-cli-babel": "^8.2.0",
     "ember-cli-htmlbars": "^6.3.0",
     "ember-template-imports": "^4.1.1",
-    "truth-helpers": "1.0.0"
+    "truth-helpers": "workspace:1.0.0"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.30",
@@ -23,7 +23,7 @@
   },
   "engines": {
     "node": ">= 18",
-    "npm": "please-use-yarn",
-    "yarn": ">= 1.21.1"
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
   }
 }
