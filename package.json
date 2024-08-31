@@ -69,9 +69,5 @@
       "virtual-dom@2.1.1": "patches/virtual-dom@2.1.1.patch",
       "licensee@10.0.0": "patches/licensee@10.0.0.patch"
     }
-  },
-  "dependencies": {
-    "loader.js": "^4.7.0",
-    "xss": "^1.0.15"
   }
 }
