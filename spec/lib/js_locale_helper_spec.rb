@@ -4,12 +4,11 @@ require "mini_racer"
 
 RSpec.describe JsLocaleHelper do
   let(:v8_ctx) do
-    node_modules = "#{Rails.root}/node_modules/"
     discourse_node_modules = "#{Rails.root}/app/assets/javascripts/discourse/node_modules"
     mf_runtime = "#{discourse_node_modules}/@messageformat/runtime"
     transpiler = DiscourseJsProcessor::Transpiler.new
     ctx = MiniRacer::Context.new
-    ctx.load("#{node_modules}/loader.js/dist/loader/loader.js")
+    ctx.load("#{discourse_node_modules}/loader.js/dist/loader/loader.js")
     ctx.eval("var window = globalThis;")
     {
       "@messageformat/runtime/messages": "#{mf_runtime}/esm/messages.js",
