@@ -110,6 +110,7 @@
     "jquery": "^3.7.1",
     "js-yaml": "^4.1.0",
     "loader.js": "^4.7.0",
+    "make-plural": "^7.4.0",
     "message-bus-client": "^4.3.8",
     "pretender": "^3.4.7",
     "qunit": "^2.22.0",
