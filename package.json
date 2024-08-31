@@ -91,6 +91,7 @@
     }
   },
   "dependencies": {
-    "loader.js": "^4.7.0"
+    "loader.js": "^4.7.0",
+    "xss": "^1.0.15"
   }
 }
