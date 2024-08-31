@@ -19,7 +19,7 @@
     "chrome-launcher": "^1.1.2",
     "chrome-remote-interface": "^0.33.2",
     "concurrently": "^8.2.2",
-    "ember-template-lint": "^5.13.0",
+    "ember-template-lint": "^6.0.0",
     "esbuild": "^0.23.1",
     "eslint": "^8.57.0",
     "jsdoc": "^4.0.0",
@@ -60,7 +60,8 @@
   "engines": {
     "node": ">= 18",
     "npm": "please-use-pnpm",
-    "yarn": "please-use-pnpm"
+    "yarn": "please-use-pnpm",
+    "pnpm": ">= 9"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -70,6 +71,20 @@
       "decorator-transforms@2.0.0": "patches/decorator-transforms@2.0.0.patch",
       "virtual-dom@2.1.1": "patches/virtual-dom@2.1.1.patch",
       "licensee@10.0.0": "patches/licensee@10.0.0.patch"
+    },
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "@discourse/lint-configs>eslint": "*",
+        "@discourse/lint-configs>prettier": "*",
+        "lint-to-the-future-eslint>eslint": "*",
+        "@mixer/parallel-prettier>prettier": "*",
+        "lint-to-the-future-ember-template>ember-template-lint": "*",
+        "ember-this-fallback>ember-source": "*"
+      },
+      "allowAny": ["@uppy/*"],
+      "ignoreMissing": [
+        "webpack"
+      ]
     }
   }
 }
