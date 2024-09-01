@@ -734,8 +734,8 @@ importers:
         specifier: ^2.7.4
         version: 2.7.4(@glint/template@1.4.1-unstable.ff9ea6c)(webpack@5.94.0(@swc/core@1.7.22)(esbuild@0.23.1))
       markdown-it:
-        specifier: ^14.0.0
-        version: 14.1.0
+        specifier: 14.0.0
+        version: 14.0.0
       pretty-text:
         specifier: workspace:1.0.0
         version: link:../pretty-text
@@ -6309,6 +6309,10 @@ packages:
 
   markdown-it@13.0.2:
     resolution: {integrity: sha512-FtwnEuuK+2yVU7goGn/MJ0WBZMM9ZPgU9spqlFs7/A/pDIUNSOQZhUgOqYCficIuR2QaFnrt8LHqBWsbTAoI5w==}
+    hasBin: true
+
+  markdown-it@14.0.0:
+    resolution: {integrity: sha512-seFjF0FIcPt4P9U39Bq1JYblX0KZCjDLFFQPHpL5AzHpqPEKtosxmdq/LTVZnjfH7tjt9BxStm+wXcDBNuYmzw==}
     hasBin: true
 
   markdown-it@14.1.0:
@@ -15495,6 +15499,15 @@ snapshots:
       linkify-it: 4.0.1
       mdurl: 1.0.1
       uc.micro: 1.0.6
+
+  markdown-it@14.0.0:
+    dependencies:
+      argparse: 2.0.1
+      entities: 4.5.0
+      linkify-it: 5.0.0
+      mdurl: 2.0.0
+      punycode.js: 2.3.1
+      uc.micro: 2.1.0
 
   markdown-it@14.1.0:
     dependencies:
