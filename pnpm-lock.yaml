@@ -743,7 +743,7 @@ importers:
         specifier: workspace:1.0.0
         version: link:../truth-helpers
       xss:
-        specifier: '*'
+        specifier: ^1.0.15
         version: 1.0.15
 
   app/assets/javascripts/discourse-plugins:
@@ -948,7 +948,7 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0
       xss:
-        specifier: '*'
+        specifier: ^1.0.15
         version: 1.0.15
     devDependencies:
       '@ember/optional-features':
