@@ -1,16 +1,359 @@
-{
-  "name": "Discourse",
-  "image": "discourse/discourse_dev:release",
-  "workspaceMount": "source=${localWorkspaceFolder}/../..,target=/var/www/discourse,type=bind",
-  "workspaceFolder": "/var/www/discourse",
-  "settings": {
-    "search.followSymlinks": false
-  },
-  "postStartCommand": "sudo /sbin/boot",
-  "extensions": ["rebornix.Ruby"],
-  "forwardPorts": [9292],
-  "remoteUser": "discourse",
-  "remoteEnv": {
-    "DISCOURSE_DEV_HOSTS": ".githubpreview.dev"
-  }
-}
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Docker</title>
+	<atom:link href="https://www.docker.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.docker.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 23 Sep 2024 17:04:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.5</generator>
+
+<image>
+	<url>https://www.docker.com/wp-content/uploads/2024/02/cropped-docker-logo-favicon-32x32.png</url>
+	<title>Docker</title>
+	<link>https://www.docker.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>2024 Docker State of Application Development Survey: Share Your Thoughts on Development</title>
+		<link>https://www.docker.com/blog/2024-docker-state-of-application-development-survey/</link>
+		
+		<dc:creator><![CDATA[Rebecca Floyd]]></dc:creator>
+		<pubDate>Tue, 24 Sep 2024 13:00:00 +0000</pubDate>
+				<category><![CDATA[Products]]></category>
+		<category><![CDATA[developers]]></category>
+		<category><![CDATA[Docker]]></category>
+		<guid isPermaLink="false">https://www.docker.com/?p=58779</guid>
+
+					<description><![CDATA[Take the 2024 Docker State of Application Development Survey now. The survey is open from September 23rd, 2024 (7AM PST) to November 20, 2024 (11:59PM PST). ]]></description>
+										<content:encoded><![CDATA[
+<p>Welcome to the third annual <a href="https://docker.qualtrics.com/jfe/form/SV_3IDfGscnmh99ex8" target="_blank" rel="noreferrer noopener nofollow"><strong>Docker State of Application Development survey</strong></a>!</p>
+
+
+
+<p>Please help us better understand and serve the application development&nbsp; community with just <strong>20-30 minutes </strong>of your time. We want to know where you’re focused, what you’re working on, and what is most important to you. Your thoughts and feedback will help us build the best products and experiences for you.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="1110" height="583" src="https://www.docker.com/wp-content/uploads/2023/10/banner_state-of-application-development-survey-1110x583.png" alt="Docker logo in white box surrounded by simple chart and graph icons" class="wp-image-47137" title="Docker logo in white box surrounded by simple chart and graph icons - banner state of application development survey" srcset="https://www.docker.com/wp-content/uploads/2023/10/banner_state-of-application-development-survey-980x515.png 980w, https://www.docker.com/wp-content/uploads/2023/10/banner_state-of-application-development-survey-480x252.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1110px, 100vw" /></figure>
+
+
+
+<p class="has-text-align-left">And, we don’t just keep this information for ourselves — we share with you<sup data-fn="f3e1f660-6374-4fb5-a12c-fa978d1bd314" class="fn"><a id="f3e1f660-6374-4fb5-a12c-fa978d1bd314-link" href="#f3e1f660-6374-4fb5-a12c-fa978d1bd314">1</a></sup>! We hope you saw our recent <a href="https://www.docker.com/resources/2024-state-of-application-development-report/" target="_blank" rel="noreferrer noopener"><strong>report on the 2023 State of Application Development Survey</strong></a>. The engagement of our community allowed us to better understand where developers are facing challenges, what tools they like, and what they’re excited about. We’ve been using this information to give our community the tools and features they need.</p>
+
+
+
+<p class="has-text-align-center"><a href="https://docker.qualtrics.com/jfe/form/SV_3IDfGscnmh99ex8" target="_blank" rel="noreferrer noopener nofollow"><strong>Take the Docker State of Application Development survey now!</strong></a></p>
+
+
+
+<p>By participating in the survey, you can be entered into a raffle for a chance to win<sup data-fn="cdcd981a-0af6-477b-bcd1-05b5f41047bd" class="fn"><a id="cdcd981a-0af6-477b-bcd1-05b5f41047bd-link" href="#cdcd981a-0af6-477b-bcd1-05b5f41047bd">2</a></sup> one of the following prizes:</p>
+
+
+
+<ul>
+<li>1 laptop computer (an <a href="https://www.apple.com/macbook-pro-14-and-16/" target="_blank" rel="noreferrer noopener nofollow">Apple M3 Macbook Pro 16&#8243;</a>)</li>
+
+
+
+<li>2 game consoles with VR headsets: <a href="https://direct.playstation.com/en-us/buy-consoles/playstationvr2" target="_blank" rel="noreferrer noopener nofollow">Playstation Virtual Reality Headset</a> and a <a href="https://www.playstation.com/en-us/ps5/" target="_blank" rel="noreferrer noopener nofollow">Playstation 5</a></li>
+
+
+
+<li>5 $300 Amazon.com gift cards&nbsp;</li>
+
+
+
+<li>50 exclusive Docker swag sets&nbsp;</li>
+</ul>
+
+
+
+<p>Additionally, the <strong>first 200 respondents to complete the survey will receive an exclusive pair of Docker socks!</strong></p>
+
+
+
+<p>The survey is open from <strong>September 23rd, 2024 (7AM PST)</strong> to <strong>November 20, 2024 (11:59PM PST)</strong>.&nbsp;</p>
+
+
+
+<p>We’ll choose the winners randomly in accordance with the promotion official rules.* Winners will be notified via email by January 10, 2025.</p>
+
+
+
+<p>The <a href="https://docker.qualtrics.com/jfe/form/SV_3IDfGscnmh99ex8" target="_blank" rel="noreferrer noopener nofollow"><strong>Docker State of Application Development Survey</strong></a> only takes about 20-30 minutes to complete. We appreciate every contribution and opinion. Your voice counts!</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+<ol class="wp-block-footnotes"><li id="f3e1f660-6374-4fb5-a12c-fa978d1bd314"><em>Data will be reported publicly only in aggregate and without personally identifying information.</em> <a href="#f3e1f660-6374-4fb5-a12c-fa978d1bd314-link" aria-label="Jump to footnote reference 1">↩︎</a></li><li id="cdcd981a-0af6-477b-bcd1-05b5f41047bd"><a href="https://www.docker.com/wp-content/uploads/2024/09/Docker-State-of-Application-Development-Promotion-2024.pdf" target="_blank" rel="noreferrer noopener"><em><a href="https://www.docker.com/wp-content/uploads/2024/09/Docker-State-of-Application-Development-Promotion-2024.pdf" target="_blank" rel="noreferrer noopener"><em>Docker State of Application Development Promotion Official Rules</em></a><em>.</em></em></a> <a href="#cdcd981a-0af6-477b-bcd1-05b5f41047bd-link" aria-label="Jump to footnote reference 2">↩︎</a></li></ol>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Using an AI Assistant to Read Tool Documentation</title>
+		<link>https://www.docker.com/blog/using-an-ai-assistant-to-read-tool-documentation/</link>
+		
+		<dc:creator><![CDATA[Docker Labs]]></dc:creator>
+		<pubDate>Mon, 23 Sep 2024 13:41:10 +0000</pubDate>
+				<category><![CDATA[Products]]></category>
+		<category><![CDATA[AI/ML]]></category>
+		<category><![CDATA[Docker Labs GenAI series]]></category>
+		<category><![CDATA[documentation]]></category>
+		<category><![CDATA[GenAI]]></category>
+		<guid isPermaLink="false">https://www.docker.com/?p=58316</guid>
+
+					<description><![CDATA[Explore how to use Docker and LLMs to streamline workflows for command-line tools to enhance the process of reading docs, troubleshooting errors, and running commands.]]></description>
+										<content:encoded><![CDATA[
+<p><em>This ongoing </em><a href="https://www.docker.com/blog/tag/genai-docker-labs/" target="_blank" rel="noreferrer noopener"><em>Docker Labs GenAI series</em></a><em> explores the exciting space of AI developer tools. At Docker, we believe there is a vast scope to explore, openly and without the hype. We will share our explorations and collaborate with the developer community in real-time. Although developers have adopted autocomplete tooling like GitHub Copilot and use chat, there is significant potential for AI tools to assist with more specific tasks and interfaces throughout the entire software lifecycle. Therefore, our exploration will be broad. We will be releasing software as open source so you can play, explore, and hack with us, too.</em></p>
+
+
+
+<p>Using new tools on the command line can be frustrating. Even if we are confident that we&#8217;ve found the right tool, we might not know how to use it.</p>
+
+
+
+<h2 class="wp-block-heading">Telling an agent to RT(F)M</h2>
+
+
+
+<p>A typical workflow might look something like the following.</p>
+
+
+
+<ul>
+<li>Install tool.</li>
+
+
+
+<li>Read the documentation.</li>
+
+
+
+<li>Run the command.</li>
+
+
+
+<li>Repeat.</li>
+</ul>
+
+
+
+<p>Can we improve this flow using LLMs?</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1110" height="583" src="https://www.docker.com/wp-content/uploads/2024/06/2400x1260_docker-labs-genai-1110x583.png" alt="2400x1260 docker labs genai" class="wp-image-56393" title="- 2400x1260 docker labs genai" srcset="https://www.docker.com/wp-content/uploads/2024/06/2400x1260_docker-labs-genai-980x515.png 980w, https://www.docker.com/wp-content/uploads/2024/06/2400x1260_docker-labs-genai-480x252.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1110px, 100vw" /></figure>
+
+
+
+<h3 class="wp-block-heading">Install tool</h3>
+
+
+
+<p>Docker provides us with isolated environments to run tools. Instead of requiring that commands be installed, we have created minimal Docker images for each tool so that using the tool does not impact the host system. Leave no trace, so to speak.</p>
+
+
+
+<h3 class="wp-block-heading">Read the documentation</h3>
+
+
+
+<p>Man pages are one of the ways that authors of tools ship content about how to use that tool. This content also comes with standard retrieval mechanisms (the <code>man</code> tool). A tool might also support a command-line option like <code>--help</code>. Let&#8217;s start with the idealistic notion that we should be able to retrieve usage information from the tool itself.</p>
+
+
+
+<p>In this experiment, we&#8217;ve created two entry points for each tool. The first entry point is the obvious one. It is a set of arguments passed directly to a command-line program. The OpenAI-compatible description that we generate for this entry point is shown below. We are using the same interface for every tool.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+{&quot;name&quot;: &quot;run_my_tool&quot;,
+   &quot;description&quot;: &quot;Run the my_tool command.&quot;,
+   &quot;parameters&quot;:
+   {&quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;:
+    {&quot;args&quot;:
+     {&quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;The arguments to pass to my_tool&quot;}}},
+   &quot;container&quot;: {&quot;image&quot;: &quot;namespace/my_tool:latest&quot;}}
+</pre></div>
+
+
+<p>The second entrypoint gives the agent the ability to read the <code>man</code> page and, hopefully, improve its ability to run the first entrypoint. The second entrypoint is simpler, because it only does one thing (asks a tool how to use it).</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+{&quot;name&quot;: &quot;my_tool_manual&quot;,
+   &quot;description&quot;: &quot;Read the man page for my_tool&quot;,
+   &quot;container&quot;: {&quot;image&quot;: &quot;namespace/my_tool:latest&quot;, &quot;command&quot;: &#x5B;&quot;man&quot;]}}
+</pre></div>
+
+
+<h3 class="wp-block-heading">Run the command</h3>
+
+
+
+<p>Let&#8217;s start with a simple example. We want to use a tool called<a href="https://github.com/fukuchi/libqrencode" target="_blank" rel="noreferrer noopener nofollow"> qrencode</a> to generate a<a href="https://en.wikipedia.org/wiki/QR_code" target="_blank" rel="noreferrer noopener nofollow"> QR code</a> for a link. We have used our image generation pipeline to package this tool into a minimal<a href="https://hub.docker.com/repository/docker/vonwig/qrencode/general" target="_blank" rel="noreferrer noopener nofollow"> image for qrencode</a>. We will now pass this prompt to a few different LLMs; we are using LLMs that have been trained for tool calling (e.g., GPT 4, Llama 3.1, and Mistral). Here&#8217;s the prompt that we are testing:</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+Generate a QR code for the content https://github.com/docker/labs-ai-tools-for-devs/blob/main/prompts/qrencode/README.md. Save the generated image to qrcode.png.
+If the command fails, read the man page and try again.
+</pre></div>
+
+
+<p>Note the optimism in this prompt. Because it&#8217;s hard to predict what different LLMs have already seen in their training sets, and many command-line tools use common names for arguments, it&#8217;s interesting to see what LLM will infer before adding the <code>man</code> page to the context.</p>
+
+
+
+<p>The output of the prompt is shown below. Grab your phone and check it out.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><a href="https://www.docker.com/wp-content/uploads/2024/10/F1-Content-QR-code.png" target="_blank" rel="noreferrer noopener"><img decoding="async" width="135" height="135" src="https://www.docker.com/wp-content/uploads/2024/10/F1-Content-QR-code.png" alt="Black and white QR code generated by AI assistant." class="wp-image-58322" title="Black and white QR code generated by AI assistant. - F1 Content QR code"></a><figcaption class="wp-element-caption"><strong>Figure 1: </strong>Content QR code generated by AI assistant.</figcaption></figure>
+
+
+
+<h3 class="wp-block-heading">Repeat</h3>
+
+
+
+<p>When an LLM generates a description of how to run something, it will usually format that output in such a way that it will be easy for a user to cut and paste the response into a terminal:</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+qrencode -o qrcode.png &#039;my content&#039;
+</pre></div>
+
+
+<p>However, if the LLM is generating tool calls, we&#8217;ll see output that is instead formatted to be easier to run:</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+&#x5B;{&quot;function&quot;: {&quot;arguments&quot;: &quot;{
+  \&quot;args\&quot;: \&quot;-o qrcode.png &#039;my content&#039;\&quot;
+}&quot;
+               &quot;name&quot;: &quot;qrencode&quot;}
+  &quot;id&quot;: &quot;call_Vdw2gDFMAwaEUMgxLYBTg8MB&quot;}]
+</pre></div>
+
+
+<p>We respond to this by spinning up a Docker container.</p>
+
+
+
+<p>Running the tool as part of the conversation loop is useful even when the command fails. In Unix, there are standard ways to communicate failures. For example, we have <code>exit</code> codes, and <code>stderr</code> streams. This is how tools create feedback loops and correct our behavior while we&#8217;re iterating at the terminal. This same mechanism can be used in a conversation loop involving an LLM.</p>
+
+
+
+<p>To illustrate, here is another simple example. We&#8217;ll try running a tool<a href="https://github.com/cmatsuoka/figlet" target="_blank" rel="noreferrer noopener nofollow"> that writes ASCII art</a> with the following prompt.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+Write ascii art with the message &quot;Docker&quot; using the font &quot;helvetica&quot;.  Read the man page for figlet if you detect any errors and then try again.
+</pre></div>
+
+
+<p>In our test, this did fail. However, it also described the apparent issue on the <code>stderr</code> output stream.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+Error: error: could not load font helvetica
+</pre></div>
+
+
+<p>By including this message in the conversation loop, the assistant can suggest different courses of action. Different LLMs produced different results here. For example, Llama 3.1 gives instructions for how to install the missing font. On the other hand, GPT 4 re-ran the command, but only after having made the &#8220;executive&#8221; decision to try a different font.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+I&#039;m sorry, it seems the font Helvetica is not available. Let&#039;s try it with the default font.
+
+Here is the output of the figlet command with the default font (term): 
+
+ ____             _             
+|   \    _       | | _____ _ 
+| | | |/  \ / _| |/ /  \ &#039;_|
+| |_| | (_) | (__|   &lt;  __/ |   
+|____/ \___/ \___|_|\_\___|_|
+</pre></div>
+
+
+<p>We are very early in understanding how to take advantage of this apparent capacity to try different approaches. But this is another reason why quarantining these tools in Docker containers is useful. It limits their blast radius while we encourage experimentation.</p>
+
+
+
+<h2 class="wp-block-heading">Results</h2>
+
+
+
+<p>We started by creating a pipeline to produce minimal Docker images for each tool. The set of tools was selected based on whether they have outputs useful for developer-facing workflows. We continue to add new tools as we think of new use cases. The initial set is listed below.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+gh pylint commitlint scalafix gitlint yamllint checkmake gqlint sqlint golint golangci-lint hadolint markdownlint-cli2 cargo-toml-lint ruff dockle clj-kondo selene tflint rslint yapf puppet-lint oxlint kube-linter csslint cpplint ansible-lint actionlint black checkov jfmt datefmt rustfmt cbfmt yamlfmt whatstyle rufo fnlfmt shfmt zprint jet typos docker-ls nerdctl diffoci dive kompose git-test kubectl fastly infracost sops curl fzf ffmpeg babl unzip jq graphviz pstree figlet toilet tldr qrencode clippy go-tools ripgrep awscli2 azure-cli luaformatter nixpkgs-lint hclfmt fop dnstracer undocker dockfmt fixup_yarn_lock github-runner swiftformat swiftlint nix-linter go-critic regal textlint formatjson5 commitmsgfmt
+</pre></div>
+
+
+<p>There was a set of initial problems with context extraction.</p>
+
+
+
+<h3 class="wp-block-heading">Missing manual pages</h3>
+
+
+
+<p>Only about 60% of the tools we selected have <code>man</code> pages. However, even in those cases, there are usually other ways to get help content. The following steps show the final procedure we used:</p>
+
+
+
+<ul>
+<li>Try to run the <code>man</code> page.</li>
+
+
+
+<li>Try to run the tool with the argument <code>--help</code>.</li>
+
+
+
+<li>Try to run the tool with the argument <code>-h</code>.</li>
+
+
+
+<li>Try to run the tool with <code>--broken</code> args and then read <code>stderr</code>.</li>
+</ul>
+
+
+
+<p>Using this procedure, every tool in the list above eventually produced documentation.</p>
+
+
+
+<h3 class="wp-block-heading">Long manual pages</h3>
+
+
+
+<p>Limited context lengths impacted some of the longer manual pages, so it was still necessary to employ standard RAG techniques to summarize verbose man pages. Our tactic was to focus on descriptions of command-line arguments and sections that had sample usage. These had the largest impact on the quality of the agent&#8217;s output. The structure of Unix <code>man</code> pages helped with the chunking, because we were able to rely on standard sections to chunk the content.</p>
+
+
+
+<h3 class="wp-block-heading">Subcommands</h3>
+
+
+
+<p>For a small set of tools, it was necessary to traverse a tree of help menus. However, these were all relatively popular tools, and the LLMs we deployed already knew about this command structure. It&#8217;s easy to check this out for yourself. Ask an LLM, for example: &#8220;What are the subcommands of Git?&#8221;
